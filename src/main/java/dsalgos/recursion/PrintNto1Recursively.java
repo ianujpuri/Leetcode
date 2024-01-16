@@ -1,17 +1,17 @@
 package dsalgos.recursion;
 
-public class Print1ToNRecursively {
+public class PrintNto1Recursively {
 
     public static void main(String[] args) {
-        print1ToN(10);
+        printNto1(10);
     }
-    static void print1ToN(int n) {
+    static void printNto1(int n) {
 
         if(n == 0) {
             return;
         }
 
-        print1ToN(n-1);
         System.out.println(n);
+        printNto1(n-1);
     }
 }
