@@ -2,7 +2,6 @@ package dsalgos.recursion;
 
 public class SumOfSubsetsToK {
 
-    public  static int result = 0;
     public static void main(String[] args) {
         final int arr[] = {8,2,6,4};
         final int sum = 10;
