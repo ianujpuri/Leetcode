@@ -57,12 +57,6 @@ public class SearchElementRotatedArray {
     public static void main(String[] args) {
         int[] A = {5, 6, 7, 8, 9, 10, 1, 2, 3};
 
-        int index = 0;
-
-        System.out.println(index = findParitionIndex(A, 0, A.length));
-
-        System.out.println(A[index]);
-
         System.out.println("Element 3 is at : "+ findElementInRoatatedSortedArray(A, 8)  + "!!");
     }
 }
