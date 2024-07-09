@@ -55,6 +55,7 @@ public class RotateArrayByK {
 
     private static void reverseFor(int[] arr, int start, int end) {
         int mid = (end - start+1) / 2;
+
         for(int i = 0; i < mid; i++) {
             int temp = arr[start+i];
             arr[start+i] = arr[end-i];
