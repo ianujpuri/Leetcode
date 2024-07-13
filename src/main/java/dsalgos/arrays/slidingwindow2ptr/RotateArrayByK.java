@@ -49,6 +49,7 @@ public class RotateArrayByK {
             arr[start] = arr[end];
             arr[end] = temp;
             start++;
+
             end--;
         }
     }
