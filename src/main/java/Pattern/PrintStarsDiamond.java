@@ -6,6 +6,4 @@ public class PrintStarsDiamond {
         PrintStarsPyramid.printStars(4);
         PrintPyramidFlipped.printStars(4);
     }
-
-
 }
