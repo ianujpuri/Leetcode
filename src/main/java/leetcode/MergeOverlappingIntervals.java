@@ -14,7 +14,6 @@ public class MergeOverlappingIntervals {
 
     public static void solution(int[][] intervals) {
 
-
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
 
         List<int[]> result  = new ArrayList<>();
