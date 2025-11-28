@@ -10,8 +10,8 @@ public class EncodeDecode {
 
         EncodeDecode ed = new EncodeDecode();
 
-        List<String> input = Arrays.asList(new String[]{"87oi9", "code", "love", "you"});
-
+//        List<String> input = Arrays.asList(new String[]{"we","say",":","yes","!@#$%^&*()"});
+        List<String> input = Arrays.asList(new String[]{"we","say",":","yes"});
         String encoded = ed.encode(input);
         System.out.println("Encoded String : " + encoded);
 
@@ -21,7 +21,7 @@ public class EncodeDecode {
     public String encode(List<String> strs) {
         StringBuilder encoded = new StringBuilder();
         for(String str : strs) {
-            encoded.append(""+str.length());
+            encoded.append(""+str.length()+"#");
             encoded.append(str);
         }
 
@@ -34,7 +34,12 @@ public class EncodeDecode {
         char[] encodedString = str.toCharArray();
         StringBuilder temp = new StringBuilder();
         for(int i = 0; i < encodedString.length; i++) {
-            int n = encodedString[i] - '0';
+
+            for(int x = i; x < encodedString.length && encodedString[x] != '#'; x++, i++) {
+                temp.append(encodedString[x]);
+            }
+            int n = Integer.parseInt(temp.toString());
+            temp.setLength(0);
             i++;
             int j = i;
             for(; j < i+n && j < encodedString.length; j++) {
