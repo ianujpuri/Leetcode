@@ -8,13 +8,12 @@ public class SetMatrixZeros {
 
     public static void main(String[] args) {
         int[][] matrix = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
-        matrix = setMatrixZeros(matrix);
-
+        setMatrixZeros(matrix);
         Arrays.stream(matrix).forEach(e -> {Arrays.stream(e).forEach(System.out::print);
             System.out.println();});
     }
 
-    private static int[][] setMatrixZeros(int[][] matrix) {
+    private static void setMatrixZeros(int[][] matrix) {
 
         Set<Integer> markedRows = new HashSet<>();
         Set<Integer> markedColumns = new HashSet<>();
@@ -36,6 +35,5 @@ public class SetMatrixZeros {
             }
         }
 
-        return matrix;
     }
 }

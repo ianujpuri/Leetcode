@@ -6,6 +6,7 @@ public class PascalTriangle {
 
     public static void main(String[] args) {
         System.out.println(find(5, 3, 2));
+        System.out.println(findNthValue( 3, 2));
     }
 
     private static int find(int N, int r, int c) {
@@ -27,5 +28,20 @@ public class PascalTriangle {
         }
 
         return matrix[r-1][c-1];
+    }
+
+    private static long findNthValue(int r, int c) {
+
+        return nCr(r-1, c-1);
+    }
+
+    private static long nCr(int n, int r) {
+        long ans = 1;
+        for(int i=0 ; i <r; i++) {
+            ans *= (n-i);
+            ans /= (i+1);
+        }
+
+        return ans;
     }
 }
