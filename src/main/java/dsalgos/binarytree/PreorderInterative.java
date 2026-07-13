@@ -1,18 +1,18 @@
 package dsalgos.binarytree;
 
-import datastructures.BinaryTree;
+import datastructures.bst.BinarySearchTree;
 
 import java.util.Stack;
 
 public class PreorderInterative {
 
 
-    private static void iterativePreOrder(BinaryTree.Node root) {
-        Stack<BinaryTree.Node> stack = new Stack<>();
+    private static void iterativePreOrder(BinarySearchTree.Node root) {
+        Stack<BinarySearchTree.Node> stack = new Stack<>();
         stack.push(root);
 
         while (!stack.isEmpty()) {
-            BinaryTree.Node node = stack.peek();
+            BinarySearchTree.Node node = stack.peek();
             if(node != null && node.isVisited()
                 && (node.getLeft() == null || node.getLeft().isVisited())
                 && (node.getRight() == null || node.getRight().isVisited())) {
